@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Check if MySQL server is already running
+if pgrep -x "mysqld" > /dev/null
+then
+    echo "MySQL server is already running."
+else
+    # Start MySQL server
+    echo "Starting MySQL server..."
+    mysql.server start
+fi
+
